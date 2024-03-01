@@ -1,9 +1,55 @@
 site_name: HoloISO
 nav:
   - Home: index.md
-  - Documentation: documentation.md
-  - Installation: install.md
-theme: material
+  - Get HoloISO:
+    - get/index.md 
+    - Installation: get/install.md
+    - Downloads: get/downloads.md
+    - I'm using the non immutable build, what do i do now?: get/migrate.md
+  - Documentation:
+    - documentation/index.md
+    - Building: documentation/bd.md
+    - The filesystem structure: documentation/fs.md
+    - Updates/deployment: documentation/dpl.md
+    - Boot process: documentation/bp.md
+    - Notes: documentation/notes.md
+    - Check the update endpoint: https://cd2.holoiso.ru.eu.org/holoiso-images/
+  - Issuetracker: https://github.com/holoiso-staging/issuetracker
+theme:
+  name: material
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+      scheme: slate
+      primary: black
+      accent: indigo
+  favicon: assets/log.svg
+  logo: assets/log.svg
 markdown_extensions:
   - admonition
 use_directory_urls: true
