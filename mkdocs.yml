@@ -5,7 +5,8 @@ nav:
     - get/index.md 
     - Installation: get/install.md
     - Downloads: get/downloads.md
-    - I'm using the non immutable build, what do i do now?: get/migrate.md
+    - Dual-boot: get/db.md
+    - Legacy Migration: get/migrate.md
   - Documentation:
     - documentation/index.md
     - Building: documentation/bd.md

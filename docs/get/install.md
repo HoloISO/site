@@ -9,7 +9,7 @@
 
 ### Installation
 
-1. Flash the ISO from the [downloads](downloads.md) page using BalenaEtcher, Rufus with DD mode, or by typing `sudo dd if=SteamOS.iso of=/dev/sd(your flash drive) bs=4M status=progress oflag=sync`, or by simply throwing ISO into Ventoy drive.
+1. Flash the ISO from the [downloads](downloads.md) page using BalenaEtcher, Rufus with DD mode, or by typing `sudo dd if=SteamOS.iso of=(your flash drive) bs=4M status=progress oflag=sync`, or by simply throwing ISO into Ventoy drive.
 2. Boot into ISO.
 3. Click on "Install HoloISO on this device".
 4. Follow on-screen instructions.
