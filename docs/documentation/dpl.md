@@ -5,9 +5,9 @@ This chapter will describe how `steamos-update` is being used to deploy builds o
 
 If `steamos-update check` is being ran:
 
-1. Downloads latest update metadata from `https://cd2.holoiso.ru.eu.org/holoiso-images` in following fashion:
-    - Checks if there's update branch override (i.o.w subbranch) set by `${UPDATE_BRANCH_OVERRIDE}` either by default in `/etc/holoiso-release` or in `/etc/manual-enroll-override` set by `holoiso-enroll-build`, in which case, the endpoint link turns into `https://cd2.holoiso.ru.eu.org/holoiso-images/${UPDATE_BRANCH_OVERRIDE}/latest_${UPD_BRANCH}.releasemeta`
-    - Else? Set `https://cd2.holoiso.ru.eu.org/holoiso-images/latest_${UPD_BRANCH}.releasemeta` and download the metadata from there.
+1. Downloads latest update metadata from `https://get.holoiso.ru.eu.org/holoiso-images` in following fashion:
+    - Checks if there's update branch override (i.o.w subbranch) set by `${UPDATE_BRANCH_OVERRIDE}` either by default in `/etc/holoiso-release` or in `/etc/manual-enroll-override` set by `holoiso-enroll-build`, in which case, the endpoint link turns into `https://get.holoiso.ru.eu.org/holoiso-images/${UPDATE_BRANCH_OVERRIDE}/latest_${UPD_BRANCH}.releasemeta`
+    - Else? Set `https://get.holoiso.ru.eu.org/holoiso-images/latest_${UPD_BRANCH}.releasemeta` and download the metadata from there.
     !!! info "Wonder if something is going wrong? By default, Steam client checks for those exit codes:"
         - Exitcode `7` means that no update is available
         - Exitcode `0` means that update is available/finished updating/successful return
