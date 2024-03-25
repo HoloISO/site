@@ -7,7 +7,7 @@ nav:
     - Downloads: get/downloads.md
     - Dual-boot: get/db.md
     - Legacy Migration: get/migrate.md
-  - Updates: updates
+  - Updates: updates/index.md
   - Documentation:
     - documentation/index.md
     - Building: documentation/bd.md
