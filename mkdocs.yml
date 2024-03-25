@@ -16,7 +16,7 @@ nav:
     - Boot process: documentation/bp.md
     - Notes: documentation/notes.md
     - Check the update endpoint: https://cd2.holoiso.ru.eu.org/holoiso-images/
-  - Issuetracker: https://github.com/holoiso-staging/issuetracker
+  - Issuetracker: https://github.com/HoloISO/issuetracker
 theme:
   name: material
   features:

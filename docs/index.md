@@ -61,7 +61,7 @@ Most CPUs work fine, but people have reported an inoperable experience on 7xxx s
 
 ### Contribution
 
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an [issue](https://github.com/holoiso-staging/issuetracker) or pull request on postcopy/buildroot parts of this organization.
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an [issue](https://github.com/HoloISO/issuetracker) or pull request on postcopy/buildroot parts of this organization.
 
 ---
 
