@@ -13,7 +13,7 @@ In order to make a default HoloISO system image build, you would need following 
 2. If you wish to maintain your own fork, with working updates, add `--add-release` to the build command which will generate SHA sum and update metadata to be used by update client with your host.
 !!! warning "About updates..."
 
-    In order to properly serve updates on your own, make *SURE* that you change the update endpoint in `/postcopy_{BRANCH}/usr/bin/steamos-update`
+    In order to properly serve updates on your own, make *SURE* that you change the update endpoint in `/postcopy_{BRANCH}/etc/steamos-atomupd/mirror`
 3. After several minutes or so, you will find your compressed BTRFS subvolume snapshot in the output directory, which you can deploy to your working instance if you wish.
 !!! failure "Additional notes"
 
