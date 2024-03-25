@@ -7,6 +7,7 @@ nav:
     - Downloads: get/downloads.md
     - Dual-boot: get/db.md
     - Legacy Migration: get/migrate.md
+  - Updates: updates
   - Documentation:
     - documentation/index.md
     - Building: documentation/bd.md
@@ -54,3 +55,6 @@ theme:
 markdown_extensions:
   - admonition
 use_directory_urls: true
+plugins:
+  - blog:
+      blog_dir: updates
