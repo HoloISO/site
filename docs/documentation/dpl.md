@@ -42,34 +42,22 @@ If everything is correct, next "Update" press in Steam client will run `steamos-
 2. If everything looks good, proceed to run `steamos-update-os` normally
 
 ### Process
-1. Decompress `.zst` of the update container in the same directory it is location in
-2. Remove any unused subvolumes (except the currently booted one)
-3. Install subvolume via `btrfs receive /holo_root/rootfs/ < ${installfile}`
-4. Apply postupdate hooks (mounts subvolume in `/tmp/mounts/${IMAGEFILE}` and uses `arch-chroot` to do anything inside it):
-    - Unseal the subvolume first (`steamos-readonly disable`)
-    - Install device-specific postupdate hooks (`holoiso-postupdate-mgmt`)
-    - Update GRUB configuration (`holoiso-grub-update`)
-    - Seal the subvolume (`steamos-readonly enable`)
-5. Clean up (Unmount the subvolume and remove `/home/.steamos/updatecontainer` contents)
-6. Done
+1. Install subvolume via `holo-deploy install ${installfile}`
+2. Apply postupdate hooks via `holo-deploy switch /rootfs/${installfile}`
+3. Clean up (remove `/home/.steamos/updatecontainer` contents)
+4. Done
 
 This sums up the normal update process via steamos-update.
 
 ## Manual installation
 If you would like to manually install customly-built/or official, but downloaded from the server image build, follow these instructions:
 
-1. Make sure that your image is decompressed (run `file` on the file, and see if it says `BTRFS stream`)
-2. Make sure that your current installation is set to RW (`steamos-readonly disable`)
+1. Make sure that your current installation is set to RW (`steamos-readonly disable`)
 
-Let's assume that our file is called INSTALL.img,
+Let's assume that our file is called INSTALL.img or INSTALL.img.zst, and we wrap it into a variable called `installfile`,
 
-1. Apply subvolume against `holo_root` by `btrfs receive /holo_root/rootfs/ < INSTALL.img`
-2. Mount the subvolume in any folder you wish by `mount -t btrfs -o subvol=rootfs/INSTALL -L holo_root path`
-3. Apply postupdate hooks (use `arch-chroot path` to perform these tasks):
-    - Unseal the subvolume first (`steamos-readonly disable`)
-    - Install device-specific postupdate hooks (`holoiso-postupdate-mgmt`)
-    - Update GRUB configuration (`holoiso-grub-update`)
-    - Seal the subvolume (`steamos-readonly enable`)
-4. Reboot the device, and see if GRUB shows your new boot option (`SteamOS, subvolume /rootfs/INSTALL` or `SteamOS, subvolume /rootfs/INSTALL with linux-kernel`)
+1. Install subvolume via `holo-deploy install ${installfile}`
+2. Apply postupdate hooks via `holo-deploy switch /rootfs/${installfile}`
+3. Reboot the device, and see if GRUB shows your new boot option (`SteamOS, subvolume /rootfs/INSTALL` or `SteamOS, subvolume /rootfs/INSTALL with linux-kernel`)
 
-That is all you need to install subvolume images on your own, in future, the post-update machinations will be slimmed down to one command.
+That is all you need to install subvolume images on your own.
