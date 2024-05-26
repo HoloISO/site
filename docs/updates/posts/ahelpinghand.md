@@ -4,9 +4,9 @@ categories:
   - General
 ---
 
-![alt text](image-2.png)
-
 # A Helping hand.
+
+![alt text](image-2.png)
 
 Hey everyone! Hope everyone's great.
 
