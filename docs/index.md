@@ -28,7 +28,6 @@ Most CPUs work fine, but people have reported an inoperable experience on 7xxx s
 #### GPU:
 
 - AMD GPUs with RADV support are guaranteed to work fully stable.
-- NVIDIA GPUs (Beta).
 - Intel GPUs (Random experience).
 
 ### Progress

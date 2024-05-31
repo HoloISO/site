@@ -4,7 +4,6 @@
 - Around 60GB free space anywhere on the drive (You could put /home partition on any drive you wish.)
 - More than 8 GB RAM if you plan to use "Copy-To-RAM" option to install
 - For normal builds (`rel/beta`): AMD GPU that supports RADV Drivers instead of Radeon (Southern Islands and Sea Islands require additional kernel cmdline property)
-- For `dev_nv` builds: NVIDIA GPU above or equal to Maxwell generation
 - UEFI-enabled device
 - Disabled secure boot
 
